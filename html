@@ -1,0 +1,100 @@
+<DocType HTML>
+<html>
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+      <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <script src="https://cdn.rawgit.com/naptha/tesseract.js/0.2.0/dist/tesseract.js">
+      </script>
+      <style type="text/css">
+        nav{
+          color: 
+        }
+        .id="tt{
+          float: right;
+          margin: 0 0 10px 10px;
+        }
+		body {
+			margin: 0;
+			font-family: 'Permanent Marker', cursive;
+		}
+
+		.gradient {
+			position: relative;
+			height: 100vh;
+			width: 100%;
+			background-image: linear-gradient(180deg,#4ac1ff,#795bb0);
+	
+			h1 {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				font-size: 40px;
+				background-color: skyBlue;
+				background-image: -webkit-linear-gradient(left, #fff 0%, #42f480 50%, transparent 50%);
+				background-position: 100% 0;
+				background-size: 200% 200%;
+				color: transparent;
+				-webkit-transition: .05s .1s;
+				-webkit-background-clip: text;
+				cursor: pointer;
+				text-align: center;
+		
+				&:hover {
+					background-position: 0 0;
+					color: transparent;
+					transition: .3s 0;
+				}
+			}
+		}
+
+      </style>
+    </head>
+ <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">   
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Scandalous Scaneru</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="">Sign Up</a>
+        <a class="mdl-navigation__link" href="">Login</a>
+      </nav>
+    </div>
+
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Options</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Scanner</a>
+      <a class="mdl-navigation__link" href="">Existing...</a>
+      <a class="mdl-navigation__link" href="">Share</a>
+      <a class="mdl-navigation__link" href="">Account</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+      
+    <div class="gradient"><h3>Begin Scanning files below</h3></div>
+		<body>
+			<input type="text" id="url" placeholder="Image URL" />
+			<input type="button" id="go_button" value="Run" />
+			<div id="ocr_results"> </div>
+			<div id="ocr_status"> </div>
+
+
+			<input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">
+			<input type="button" id="go_button" value="Run" />
+			<div id="ocr_results"> </div>
+			<div id="ocr_status"> </div>
+		</body>
+    </div>
+  </main>
+</div>
+</html>
